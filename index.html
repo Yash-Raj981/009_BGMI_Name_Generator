@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BGMI Name Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <div id="header">
+      <div class="row container">
+        <div class="logo">
+          <img src="images/bgmi_logo.jpg" alt="BGMI" />
+        </div>
+      </div>
+    </div>
+    <!-- HERO SECTION -->
+    <div id="hero">
+      <div class="hero-content">
+        <h1 class="text-center">
+          BGMI Name Generator - Stylish Name Symbols, Nick Names And Font For BGMI
+        </h1>
+        <p class="text-center">
+          Generate cool texts, Nick Names and Fonts what can be used on Battlegrounds Mobile India App!
+        </p>
+      </div>
+    </div>
+    <!-- STATISTICS -->
+    <div id="statistics">
+      <div class="stats">
+        <span><b>40+</b> Font Generators</span>
+        <p>
+          We have <b>40+</b> different stylish text generators for you
+        </p>
+      </div>
+      <div class="stats">
+        <span><b>3000+</b> Names</span>
+        <p>
+          We have converted <b>3000+</b> Names into cool and stylish text
+        </p>
+      </div>
+    </div>
+    <hr />
+    <!-- MAIN SECTION -->
+    <div id="main">
+      <div class="main-content">
+        <div class="main-row">
+          <div id="user-input-text">
+            <input type="text" autocomplete="off" placeholder="Enter your name" maxlength="40" id="user-input" />
+          </div>
+          <div class="btn-col">
+            <button id="btn" onclick="genText()">Generate</button>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op0"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(0)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op1">bold</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(1)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op2">bold italic</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(2)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op3">bold script</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(3)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op4">bubble</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(4)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op5">double struck</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(5)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op6">emoji</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(6)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op7">italic</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(7)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op8">leet speek</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(8)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op9">script</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(9)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op10">small capital</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(10)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op11">square</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(11)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op12">strike</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(12)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op13">tilde strike</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(13)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op14">underline</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(14)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op15">upsidedown</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(15)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op16">bold fraktur</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(16)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op17">ethiopic</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(17)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op18">fraktur</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(18)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op19">monospace</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(19)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op20">rockdots</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(20)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op21">sold bubble</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(21)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op22">parenthesized</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(22)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op23">Special Fonts</span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(23)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op24"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(24)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op25"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(25)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op26"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(26)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op27"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(27)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op28"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(28)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op29"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(29)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op30"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(30)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op31"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(31)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op32"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(32)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op33"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(33)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op34"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(34)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op35"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(35)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op36"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(36)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op37"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(37)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op38"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(38)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op39"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(39)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op40"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(40)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op41"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(41)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op42"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(42)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+        <div class="main-row">
+          <div class="card">
+            <span id="op43"></span>
+          </div>
+          <div class="main-col-2">
+            <span style="cursor: pointer" onclick="copyText(43)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="special">
+        <div class="main-content">
+          <div class="main-row">
+            <h2>Special Symbols</h2>
+            <span>Click to copy special symbols</span>
+            <div class="symbol-card" id="symbol1" style="cursor: pointer" onclick="copySymbol(1)"> ツ </div>
+            <div class="symbol-card" id="symbol2" style="cursor: pointer" onclick="copySymbol(2)"> 么 </div>
+            <div class="symbol-card" id="symbol3" style="cursor: pointer" onclick="copySymbol(3)"> 〆 </div>
+            <div class="symbol-card" id="symbol4" style="cursor: pointer" onclick="copySymbol(4)"> ® </div>
+            <div class="symbol-card" id="symbol5" style="cursor: pointer" onclick="copySymbol(5)"> 彡 </div>
+            <div class="symbol-card" id="symbol6" style="cursor: pointer" onclick="copySymbol(6)"> × </div>
+            <div class="symbol-card" id="symbol7" style="cursor: pointer" onclick="copySymbol(7)"> ॐ </div>
+            <div class="symbol-card" id="symbol8" style="cursor: pointer" onclick="copySymbol(8)"> Ł </div>
+            <div class="symbol-card" id="symbol9" style="cursor: pointer" onclick="copySymbol(9)"> ٭ </div>
+            <div class="symbol-card" id="symbol10" style="cursor: pointer" onclick="copySymbol(10)"> 私 </div>
+            <div class="symbol-card" id="symbol11" style="cursor: pointer" onclick="copySymbol(11)"> 丶 </div>
+            <div class="symbol-card" id="symbol12" style="cursor: pointer" onclick="copySymbol(12)"> ズ </div>
+            <div class="symbol-card" id="symbol13" style="cursor: pointer" onclick="copySymbol(13)"> 刁 </div>
+            <div class="symbol-card" id="symbol14" style="cursor: pointer" onclick="copySymbol(14)"> Ø </div>
+            <div class="symbol-card" id="symbol15" style="cursor: pointer" onclick="copySymbol(15)"> ジ </div>
+            <div class="symbol-card" id="symbol16" style="cursor: pointer" onclick="copySymbol(16)"> ・ </div>
+            <div class="symbol-card" id="symbol17" style="cursor: pointer" onclick="copySymbol(17)"> 「」 </div>
+            <div class="symbol-card" id="symbol18" style="cursor: pointer" onclick="copySymbol(18)"> 卍 </div>
+            <div class="symbol-card" id="symbol19" style="cursor: pointer" onclick="copySymbol(19)"> 文 </div>
+            <div class="symbol-card" id="symbol20" style="cursor: pointer" onclick="copySymbol(20)"> 《 </div>
+            <div class="symbol-card" id="symbol21" style="cursor: pointer" onclick="copySymbol(21)"> 气 </div>
+            <div class="symbol-card" id="symbol22" style="cursor: pointer" onclick="copySymbol(22)"> Ð </div>
+            <div class="symbol-card" id="symbol23" style="cursor: pointer" onclick="copySymbol(23)"> 个 </div>
+            <div class="symbol-card" id="symbol24" style="cursor: pointer" onclick="copySymbol(24)"> 연 </div>
+            <div class="symbol-card" id="symbol25" style="cursor: pointer" onclick="copySymbol(25)"> シ </div>
+            <div class="symbol-card" id="symbol26" style="cursor: pointer" onclick="copySymbol(26)"> 刁 </div>
+            <div class="symbol-card" id="symbol27" style="cursor: pointer" onclick="copySymbol(27)"> 『』 </div>
+            <div class="symbol-card" id="symbol28" style="cursor: pointer" onclick="copySymbol(28)"> 丨 </div>
+            <div class="symbol-card" id="symbol29" style="cursor: pointer" onclick="copySymbol(29)"> 廴 </div>
+            <div class="symbol-card" id="symbol30" style="cursor: pointer" onclick="copySymbol(30)"> 一 </div>
+            <div class="symbol-card" id="symbol31" style="cursor: pointer" onclick="copySymbol(31)"> × </div>
+            <div class="symbol-card" id="symbol32" style="cursor: pointer" onclick="copySymbol(32)"> 父 </div>
+            <div class="symbol-card" id="symbol33" style="cursor: pointer" onclick="copySymbol(33)"> 神 </div>
+            <div class="symbol-card" id="symbol34" style="cursor: pointer" onclick="copySymbol(34)"> 人 </div>
+            <div class="symbol-card" id="symbol35" style="cursor: pointer" onclick="copySymbol(35)"> 帝 </div>
+            <div class="symbol-card" id="symbol36" style="cursor: pointer" onclick="copySymbol(36)"> レ </div>
+            <div class="symbol-card" id="symbol37" style="cursor: pointer" onclick="copySymbol(37)"> ｱ </div>
+            <div class="symbol-card" id="symbol38" style="cursor: pointer" onclick="copySymbol(38)"> ロ </div>
+            <div class="symbol-card" id="symbol39" style="cursor: pointer" onclick="copySymbol(39)"> 〖〗 </div>
+            <div class="symbol-card" id="symbol40" style="cursor: pointer" onclick="copySymbol(40)"> 요 </div>
+            <div class="symbol-card" id="symbol41" style="cursor: pointer" onclick="copySymbol(41)"> ۝ </div>
+            <div class="symbol-card" id="symbol42" style="cursor: pointer" onclick="copySymbol(42)"> ๔ </div>
+            <div class="symbol-card" id="symbol43" style="cursor: pointer" onclick="copySymbol(43)"> ๏ </div>
+            <div class="symbol-card" id="symbol44" style="cursor: pointer" onclick="copySymbol(44)"> 卄 </div>
+            <div class="symbol-card" id="symbol45" style="cursor: pointer" onclick="copySymbol(45)"> 米 </div>
+            <div class="symbol-card" id="symbol46" style="cursor: pointer" onclick="copySymbol(46)"> īlī </div>
+            <div class="symbol-card" id="symbol47" style="cursor: pointer" onclick="copySymbol(47)"> ム </div>
+            <div class="symbol-card" id="symbol48" style="cursor: pointer" onclick="copySymbol(48)"> 王 </div>
+            <div class="symbol-card" id="symbol49" style="cursor: pointer" onclick="copySymbol(49)"> 女 </div>
+            <div class="symbol-card" id="symbol50" style="cursor: pointer" onclick="copySymbol(50)"> ゞ </div>
+            <div class="symbol-card" id="symbol51" style="cursor: pointer" onclick="copySymbol(51)"> ⦇⦈ </div>
+            <div class="symbol-card" id="symbol52" style="cursor: pointer" onclick="copySymbol(52)"> 冬 </div>
+            <div class="symbol-card" id="symbol53" style="cursor: pointer" onclick="copySymbol(53)"> れ </div>
+            <div class="symbol-card" id="symbol54" style="cursor: pointer" onclick="copySymbol(54)"> 【】 </div>
+            <div class="symbol-card" id="symbol55" style="cursor: pointer" onclick="copySymbol(55)"> 多 </div>
+            <div class="symbol-card" id="symbol56" style="cursor: pointer" onclick="copySymbol(56)"> 々 </div>
+            <div class="symbol-card" id="symbol57" style="cursor: pointer" onclick="copySymbol(57)"> 乛 </div>
+            <div class="symbol-card" id="symbol58" style="cursor: pointer" onclick="copySymbol(58)"> 乄 </div>
+            <div class="symbol-card" id="symbol59" style="cursor: pointer" onclick="copySymbol(59)"> 乀 </div>
+            <div class="symbol-card" id="symbol60" style="cursor: pointer" onclick="copySymbol(60)"> 〘 〙 </div>
+            <div class="symbol-card" id="symbol61" style="cursor: pointer" onclick="copySymbol(61)"> 乡 </div>
+            <div class="symbol-card" id="symbol62" style="cursor: pointer" onclick="copySymbol(62)"> 私 </div>
+            <div class="symbol-card" id="symbol63" style="cursor: pointer" onclick="copySymbol(63)"> の </div>
+            <div class="symbol-card" id="symbol64" style="cursor: pointer" onclick="copySymbol(64)"> 『』 </div>
+            <div class="symbol-card" id="symbol65" style="cursor: pointer" onclick="copySymbol(65)"> 乇 </div>
+            <div class="symbol-card" id="symbol66" style="cursor: pointer" onclick="copySymbol(66)"> ɧ </div>
+            <div class="symbol-card" id="symbol67" style="cursor: pointer" onclick="copySymbol(67)"> く </div>
+            <div class="symbol-card" id="symbol68" style="cursor: pointer" onclick="copySymbol(68)"> 乇 </div>
+            <div class="symbol-card" id="symbol69" style="cursor: pointer" onclick="copySymbol(69)"> 》 </div>
+            <div class="symbol-card" id="symbol70" style="cursor: pointer" onclick="copySymbol(70)"> 爪 </div>
+            <div class="symbol-card" id="symbol71" style="cursor: pointer" onclick="copySymbol(71)"> 么 </div>
+            <div class="symbol-card" id="symbol72" style="cursor: pointer" onclick="copySymbol(72)"> ฬ </div>
+            <div class="symbol-card" id="symbol73" style="cursor: pointer" onclick="copySymbol(73)"> 失 </div>
+            <div class="symbol-card" id="symbol74" style="cursor: pointer" onclick="copySymbol(74)"> 亥 </div>
+            <div class="symbol-card" id="symbol75" style="cursor: pointer" onclick="copySymbol(75)"> 王 </div>
+            <div class="symbol-card" id="symbol76" style="cursor: pointer" onclick="copySymbol(76)"> 乙 </div>
+            <div class="symbol-card" id="symbol77" style="cursor: pointer" onclick="copySymbol(77)"> ๖ </div>
+            <div class="symbol-card" id="symbol78" style="cursor: pointer" onclick="copySymbol(78)"> ム </div>
+            <div class="symbol-card" id="symbol79" style="cursor: pointer" onclick="copySymbol(79)"> ‘ </div>
+            <div class="symbol-card" id="symbol80" style="cursor: pointer" onclick="copySymbol(80)"> 厄 </div>
+            <div class="symbol-card" id="symbol81" style="cursor: pointer" onclick="copySymbol(81)"> ภ </div>
+            <div class="symbol-card" id="symbol82" style="cursor: pointer" onclick="copySymbol(82)"> ٭ </div>
+            <div class="symbol-card" id="symbol83" style="cursor: pointer" onclick="copySymbol(83)"> ʚ </div>
+            <div class="symbol-card" id="symbol84" style="cursor: pointer" onclick="copySymbol(84)"> ๛ </div>
+            <div class="symbol-card" id="symbol85" style="cursor: pointer" onclick="copySymbol(85)"> 〆 </div>
+            <div class="symbol-card" id="symbol86" style="cursor: pointer" onclick="copySymbol(86)"> īlī </div>
+            <div class="symbol-card" id="symbol87" style="cursor: pointer" onclick="copySymbol(87)"> ≋ </div>
+            <div class="symbol-card" id="symbol88" style="cursor: pointer" onclick="copySymbol(88)"> 亗 </div>
+            <div class="symbol-card" id="symbol89" style="cursor: pointer" onclick="copySymbol(89)"> 义 </div>
+            <div class="symbol-card" id="symbol90" style="cursor: pointer" onclick="copySymbol(90)"> サ </div>
+          </div>
+          <h2>BGMI Stylish Name Generator &#8211; BGMI Supported Fonts</h2>
+          <p>Here is the list of nicknames generated using BGMI Stylish Name Generator; all the styles are different, and for all types of fonts, these decorations are automatically done when you click on the drop-down menu. If you want to use these decorated symbols with normal text, copy them and replace the <b>TEXT</b> with <b>your name</b> or whatever text you want to use.</p>
+          <div class="sample-nicknames">
+            <figure class="nicknames">
+              <table>
+                <tbody>
+                  <tr>
+                    <td id="sample-name1" onclick="copyName(1)">★彡TE᙭T彡★</td>
+                    <td id="sample-name2" onclick="copyName(2)">꧁༒☬TE᙭T☬༒꧂</td>
+                    <td id="sample-name3" onclick="copyName(3)">ཧᜰ꙰ꦿ➢ TE᙭T ༒</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name4" onclick="copyName(4)">✞☬TE᙭T☬✞</td>
+                    <td id="sample-name5" onclick="copyName(5)">▄︻デTE᙭T══━一</td>
+                    <td id="sample-name6" onclick="copyName(6)">༺TE᙭T༻</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name7" onclick="copyName(7)">✞༒TE᙭T༒✞</td>
+                    <td id="sample-name8" onclick="copyName(8)">▌│█║▌║▌║ TE᙭T ║▌║▌║█│▌</td>
+                    <td id="sample-name9" onclick="copyName(9)">×º°”˜<code>”°º× TE᙭T ×º°”˜</code>”°º×</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name10" onclick="copyName(10)">๖ۣۜTE᙭T༻࿌𖣘</td>
+                    <td id="sample-name11" onclick="copyName(11)">•?((¯°·.<em>.• TE᙭T •.</em>.·°¯))؟•</td>
+                    <td id="sample-name12" onclick="copyName(12)">•]••´º´•» TE᙭T «•´º´••[•</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name13" onclick="copyName(13)">✞☠︎TE᙭T☠︎✞</td>
+                    <td id="sample-name14" onclick="copyName(14)">ıllıllı TE᙭T ıllıllı</td>
+                    <td id="sample-name15" onclick="copyName(15)"><em>•.¸♡ TE᙭T ♡¸.•</em></td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name16" onclick="copyName(16)">✞ঔৣTE᙭Tঔৣ✞</td>
+                    <td id="sample-name17" onclick="copyName(17)">¸,ø¤º°<code>°º¤ø,¸¸,ø¤º° TE᙭T °º¤ø,¸¸,ø¤º°</code>°º¤ø,¸</td>
+                    <td id="sample-name18" onclick="copyName(18)">╰☆☆ TE᙭T ☆☆╮</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name19" onclick="copyName(19)">꧁TE᙭T꧂</td>
+                    <td id="sample-name20" onclick="copyName(20)">°°°·.°·..·°¯°·.<em>.· TE᙭T ·.</em>.·°¯°·.·° .·°°°</td>
+                    <td id="sample-name21" onclick="copyName(21)">
+                      .•°¤<em>(¯<code>★´¯)*¤° TE᙭T °¤*(¯´★</code>¯)</em>¤°•.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name22" onclick="copyName(22)">꧁꧁TE᙭T꧂꧂</td>
+                    <td id="sample-name23" onclick="copyName(23)">▁ ▂ ▄ ▅ ▆ ▇ █ TE᙭T █ ▇ ▆ ▅ ▄ ▂ ▁</td>
+                    <td id="sample-name24" onclick="copyName(24)">(¯´•.<em>.• TE᙭T •.</em>.•´¯)</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name25" onclick="copyName(25)">꧁☬TE᙭T☬꧂</td>
+                    <td id="sample-name26" onclick="copyName(26)">★·.·´¯<code>·.·★ TE᙭T ★·.·´¯</code>·.·★</td>
+                    <td id="sample-name27" onclick="copyName(27)">¸„.-•~¹°”ˆ˜¨ TE᙭T ¨˜ˆ”°¹~•-.„¸</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name28" onclick="copyName(28)">☆꧁༒TE᙭T༒꧂☆</td>
+                    <td id="sample-name29" onclick="copyName(29)">꧁༒•TE᙭T•༒꧂</td>
+                    <td id="sample-name30" onclick="copyName(30)">░▒▓█ TE᙭T █▓▒░</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name31" onclick="copyName(31)">
+                      |!¤<em>&#8216;~<code>~'*¤!| TE᙭T |!¤*'~</code>~&#8217;</em>¤!|
+                    </td>
+                    <td id="sample-name32" onclick="copyName(32)">§.•´¨&#8217;°÷•..× TE᙭T ×,.•´¨&#8217;°÷•..§</td>
+                    <td id="sample-name33" onclick="copyName(33)">░▒▓█►─═ TE᙭T ═─◄█▓▒░</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name34" onclick="copyName(34)">
+                      •.<em>.••´¯<code>`•.¸¸.•</code> TE᙭T <code>•.¸¸.•´´¯</code>••.</em>.•
+                    </td>
+                    <td id="sample-name35" onclick="copyName(35)">•°¯`•• TE᙭T ••´¯°•</td>
+                    <td id="sample-name36" onclick="copyName(36)">•´¯<code>•. TE᙭T .•´¯</code>•</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name37" onclick="copyName(37)">¸„.-•~¹°”ˆ˜¨ TE᙭T ¨˜ˆ”°¹~•-.„¸</td>
+                    <td id="sample-name38" onclick="copyName(38)">(¯<code>*•.¸,¤°´✿.｡.:* TE᙭T *.:｡.✿</code>°¤,¸.•*´¯)</td>
+                    <td id="sample-name39" onclick="copyName(39)">★彡 TE᙭T 彡★</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name40" onclick="copyName(40)">(¯´•.<em>.• TE᙭T •.</em>.•´¯)</td>
+                    <td id="sample-name41" onclick="copyName(41)">—(••÷[ TE᙭T ]÷••)—</td>
+                    <td id="sample-name42" onclick="copyName(42)">↤↤↤↤↤ TE᙭T ↦↦↦↦↦</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name43" onclick="copyName(43)">••¤(`×[¤ TE᙭T ¤]×´)¤••</td>
+                    <td id="sample-name44" onclick="copyName(44)">¸,ø¤º°<code>°º¤ø,¸ TE᙭T ¸,ø¤º°</code>°º¤ø,¸</td>
+                    <td id="sample-name45" onclick="copyName(45)">➶➶➶➶➶ TE᙭T ➷➷➷➷➷</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name46" onclick="copyName(46)">•´¯<code>•» TE᙭T «•´¯</code>•</td>
+                    <td id="sample-name47" onclick="copyName(47)">
+                      <code>•.¸¸.•´´¯</code>••.<em>.• TE᙭T •.</em>.••<code>¯´´•.¸¸.•</code>
+                    </td>
+                    <td id="sample-name48" onclick="copyName(48)">↫↫↫↫↫ TE᙭T ↬↬↬↬↬</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name49" onclick="copyName(49)">.o0×X×0o. TE᙭T .o0×X×0o.</td>
+                    <td id="sample-name50" onclick="copyName(50)">
+                      ,-<em>&#8216; ^ &#8216;~</em>-.,<em>,.-~ TE᙭T ~-.,</em>,.-<em>~&#8217; ^ &#8216;</em>-,
+                    </td>
+                    <td id="sample-name51" onclick="copyName(51)">·.¸¸.·♩♪♫ TE᙭T ♫♪♩·.¸¸.·</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name52" onclick="copyName(52)">¤¸¸.•´¯<code>•¸¸.•..&gt;&gt; TE᙭T &lt;&lt;..•.¸¸•´¯</code>•.¸¸¤</td>
+                    <td id="sample-name53" onclick="copyName(53)"><code>•.,¸¸,.•´¯ TE᙭T ¯</code>•.,¸¸,.•´</td>
+                    <td id="sample-name54" onclick="copyName(54)">【｡<em>｡】 TE᙭T 【｡</em>｡】</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name55" onclick="copyName(55)">]|I{•&#8212;&#8212;» TE᙭T «&#8212;&#8212;•}I|[</td>
+                    <td id="sample-name56" onclick="copyName(56)">๑۞๑,¸¸,ø¤º°<code>°๑۩ TE᙭T ๑۩ ,¸¸,ø¤º°</code>°๑۞๑</td>
+                    <td id="sample-name57" onclick="copyName(57)">╚»★«╝ TE᙭T ╚»★«╝</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name58" onclick="copyName(58)">▀▄▀▄▀▄ TE᙭T ▄▀▄▀▄▀</td>
+                    <td id="sample-name59" onclick="copyName(59)">
+                      .•°¤<em>(¯<code>★´¯)*¤° TE᙭T °¤*(¯´★</code>¯)</em>¤°•.
+                    </td>
+                    <td id="sample-name60" onclick="copyName(60)">-·=»‡«=·- TE᙭T -·=»‡«=·-</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name61" onclick="copyName(61)">(-<em>-) TE᙭T (-</em>-)</td>
+                    <td id="sample-name62" onclick="copyName(62)">••.•´¯<code>•.•• TE᙭T ••.•´¯</code>•.••</td>
+                    <td id="sample-name63" onclick="copyName(63)">∙∙·▫▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ TE᙭T ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫ₒₒ▫ᵒᴼᵒ▫▫·∙∙</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name64" onclick="copyName(64)">•´¯<code>•. TE᙭T .•´¯</code>•</td>
+                    <td id="sample-name65" onclick="copyName(65)">¤¸¸.•´¯<code>•¸¸.•..&gt;&gt; TE᙭T &lt;&lt;..•.¸¸•´¯</code>•.¸¸¤</td>
+                    <td id="sample-name66" onclick="copyName(66)">¸¸♬·¯·♩¸¸♪·¯·♫¸¸ TE᙭T ¸¸♫·¯·♪¸¸♩·¯·♬¸¸</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name67" onclick="copyName(67)">
+                      -漫~<em>&#8216;¨¯¨&#8217;</em>·舞~ TE᙭T
+                      ~舞<em>&#8216;¨¯¨&#8217;</em>·~漫-
+                    </td>
+                    <td id="sample-name68" onclick="copyName(68)">◦•●◉✿ TE᙭T ✿◉●•◦</td>
+                    <td id="sample-name69" onclick="copyName(69)">ஜ۩۞۩ஜ TE᙭T ஜ۩۞۩ஜ</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name70" onclick="copyName(70)">¤ (¯´☆✭.¸<em>)¤ TE᙭T ¤(</em>¸.✭☆´¯) ¤</td>
+                    <td id="sample-name71" onclick="copyName(71)">(¯<code>·.¸¸.·´¯</code>·.¸¸.-&gt; TE᙭T &lt;-.¸¸.·´¯`·.¸¸.·´¯)</td>
+                    <td id="sample-name72" onclick="copyName(72)">✿.｡.:* ☆:<strong>:. TE᙭T .:</strong>:.☆*.:｡.✿</td>
+                  </tr>
+                  <tr>
+                    <td id="sample-name73" onclick="copyName(73)">.•♫•♬• TE᙭T •♬•♫•.</td>
+                    <td id="sample-name74" onclick="copyName(74)">ღ(¯<code>◕‿◕´¯) ♫ ♪ ♫ TE᙭T ♫ ♪ ♫ (¯</code>◕‿◕´¯)ღ</td>
+                    <td id="sample-name75" onclick="copyName(75)">«-(¯<code>v´¯)-« TE᙭T »-(¯</code>v´¯)-»</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+          </div>
+          <p>Battlegrounds Mobile India is an online multiplayer game played among 100 other players for survival. Here every player has a unique username that helps to identify the player. Right now, the game has over 34 million users and it is difficult to find the unique name for your profile. Have you ever been in a situation where you have a name and it's already taken? No more worries Battlegrounds Mobile India's username is not just about some font you have on your keyboard. You can add
+            tons of fonts and symbols to your username and make them unique. To make this process even simple, quicker, and better we have launched our very own BGMI Name Generator.
+          </p>
+          <h2>What is the BGMI Name Generator?</h2>
+          <p>BGMI Name Generator is an online name or font generation tool. Here you can type any name you wish to have on your BGMI game profile and the tool will recommend you with lots of styles and fonts that add even more spice to your username. It has over 23 different fonts that support BGMI which you can copy and paste instantly to your profile. Also, we have listed almost all special characters or symbols that support Battlegrounds Mobile India.</p>
+          <h2>How to Generate Fonts using BGMI Font Generator</h2>
+          <p>[1] Discover the name you wish to have on your BGMI Profile.</p>
+          <p>[2] Go to our BGMI Name Generator.</p>
+          <p>[3] In the Enter your name text box, type the name you have.</p>
+          <p>[4] Click on Generate and you will be displayed with some cool text</p>
+          <p>[5] Copy the text manually or press the copy button next to the name.</p>
+          <p>[6] Now you can paste this on your BGMI Profile.</p>
+          <p>Also, if you are creating a new account then add the newly generated name by default and this does not require any rename card or anything to change the name.</p>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="foot-panel-1">
+        <div class="foot-div">
+          <span>Pages</span>
+          <div>
+            <ul>
+              <li>Home</li>
+              <li>How to</li>
+              <li>News</li>
+              <li>Updates & Patches</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-div">
+          <span>Other Name Generators</span>
+          <div>
+            <ul>
+              <li>Pubg Name Generator</li>
+              <li>Pubg New State Name Generator</li>
+              <li>Free Fire Name Generator</li>
+              <li>COD Name Generator</li>
+              <li>Fallout Name Generator</li>
+              <li>Fall Guys Name Generator</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-div">
+          <span>Disclaimer</span>
+          <div>
+            <p>
+              Battlegrounds Mobile India is a product of Krafton inc. Learn More
+              <a target="_blank" href="https://www.battlegroundsmobileindia.com/">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="foot-panel-2">
+        <p class="text-center">
+          Copyright 2023, BGMI Generator All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+ <body>
+  <!-- <div id="header">
+      <div class="row container">
+        <div class="col4">
+          <a href="https://battlegroundsmobileguru.com/bgmi-name-generator/">
+            <img
+              src="https://battlegroundsmobileguru.com/bgmi-name-generator/assets/img/logo.png"
+              alt="BGMI Generator"
+            />
+          </a>
+        </div>
+      </div>
+    </div> -->
+  <!-- <div id="hero">
+      <div class="row px-5">
+        <div class="col-12 text-center">
+          <h1 class="text-center">
+            BGMI Name Generator - Stylish Name Symbols, Nick Names And Font For
+            BGMI
+          </h1>
+          <p class="text-center">
+            generate cool texts, Nick Names and Fonts what can be used on
+            Battlegrounds Mobile India App!
+          </p>
+        </div>
+      </div>
+    </div> -->
+  <div id="main">
+    <div id="statistics">
+      <div class="row px-5">
+        <div class="col-6">
+          <span><b class="animate-number" data-number="24" data-duration="2000">0</b>text generators</span>
+          <p>
+            we have <b>24</b> different text generators for you to choose from
+          </p>
+        </div>
+
+        <div class="col-6">
+          <span><b class="animate-number" data-number="63" data-duration="2000">0</b>characters</span>
+          <p>
+            we have converted <b>63</b> characters into cool text and counting
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="character-sets">
+      <div class="container px-5">
+        <div class="row">
+          <div class="col-8">
+            <input class="form-control" type="text" placeholder="Enter your name" id="user_input" />
+          </div>
+          <div class="col-4">
+            <input class="form-control btn btn-success" onclick="genText()" type="submit" value="Generate" />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-8 card p-2">
+            <span class id="op0">aesthetic</span>
+          </div>
+          <div class="col-4">
+            <span style="cursor: pointer" onclick="copyText(0)"><i class="fa fa-copy"></i> Copy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container px-5">
+      <div class="row mt-5 mb-5">
+        <h2>Special Symbols</h2>
+        <span class="mb-3">Click to copy special symbols</span>
+        <div
+          class="col-lg-1 col-xl-1 col-md-1 col-sm-2 col-xs-2 card"
+          id="symbol1"
+          style="cursor: pointer"
+          onclick="copySymbol(1)">
+          ツ
+        </div>
+        <div
+          class="col-lg-1 col-xl-1 col-md-1 col-sm-2 col-xs-2 card"
+          id="symbol2"
+          style="cursor: pointer"
+          onclick="copySymbol(2)">
+          么
+        </div>
+        
+
+
+  <script
+    data-cfasync="false"
+    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script type="text/javascript">
+      window.animateNumbers("animate-number");
+    </script>
+  <script type="text/javascript">
+      function httpRequest(method, url, headers, post, callback) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+          this.readyState == 4 && callback(this.responseText);
+        };
+        request.open(method, url, true);
+        for (var i = 0; i < headers.length; i += 2) {
+          request.setRequestHeader(headers[i], headers[i + 1]);
+        }
+        request.send(post);
+      }
+
+      function postRequest(url, post, callback) {
+        httpRequest(
+          "POST",
+          url,
+          [
+            "X-Requested-With",
+            "XMLHttpRequest",
+            "Content-Type",
+            "application/x-www-form-urlencoded; charset=UTF-8",
+          ],
+          post,
+          callback
+        );
+      }
+
+      function generateText(input, output, font) {
+        postRequest(
+          window.location.href + "generate/" + font + "/ajax",
+          "text=" + encodeURIComponent(input.value),
+          function (data) {
+            output.innerText = data;
+          }
+        );
+      }
+
+      function genText() {
+        var fonts = [
+          "aesthetic",
+          "bold",
+          "bold-italic",
+          "bold-script",
+          "bubble",
+          "double-struck",
+          "emoji",
+          "italic",
+          "leet-speek",
+          "script",
+          "small-capital",
+          "square",
+          "strike",
+          "tilde-strike",
+          "underline",
+          "upsidedown",
+          "bold-fraktur",
+          "ethiopic",
+          "fraktur",
+          "monospace",
+          "rockdots",
+          "sold-bubble",
+          "parenthesized",
+          "special-fonts",
+        ];
+        var ip = document.getElementById("user_input");
+        for (var i = 0; i < 24; i++) {
+          var op = document.getElementById("op" + i);
+          generateText(ip, op, fonts[i]);
+        }
+      }
+
+      function copyText(t) {
+        var input = document.createElement("input");
+        var v = (input.value = document.getElementById("op" + t).innerHTML);
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+        mdtoast(v + " Copied to your clipboard ", {
+          type: "success",
+        });
+      }
+
+      function copySymbol(t) {
+        var input = document.createElement("input");
+        var v = (input.value = document.getElementById("symbol" + t).innerHTML);
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+        mdtoast(v + " Copied to your clipboard ", {
+          type: "success",
+        });
+      }
+    </script>
+</body>
